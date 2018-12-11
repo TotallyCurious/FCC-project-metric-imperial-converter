@@ -9,9 +9,10 @@
 function ConvertHandler() {
   
   this.getNum = function(input) {
-    var result;
-    
-    return result;
+    var patt = '\d+((\/+\d+)?|(\.+\d+(\/{1}\d+(\.+\d+)?)?)?)?'
+    var num = patt.exec(input);
+    if (!num)num=1;
+    return num;
   };
   
   this.getUnit = function(input) {
@@ -41,6 +42,7 @@ function ConvertHandler() {
         return 'mi';
         break;
       default:
+        return 'error';
         break;      
                }
   };
