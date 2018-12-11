@@ -9,16 +9,16 @@
 function ConvertHandler() {
   
   this.getNum = function(input) {
-    var patt = '\d+((\/+\d+)?|(\.+\d+(\/{1}\d+(\.+\d+)?)?)?)?'
+    let patt = '\d+((\/+\d+)?|(\.+\d+(\/{1}\d+(\.+\d+)?)?)?)?'
     var num = patt.exec(input);
     if (!num)num=1;
     return num;
   };
   
   this.getUnit = function(input) {
-    ['L','gal','lbs','kg','km','mi'].indexOf(input.split)>=0?;
-    
-    
+    let patt = '[a-z]+';
+    var unit = patt.exec(input);
+    return unit;
   };
   
   this.getReturnUnit = function(initUnit) {
@@ -42,7 +42,7 @@ function ConvertHandler() {
         return 'mi';
         break;
       default:
-        return 'error';
+        return 'invalid unit';
         break;      
                }
   };
