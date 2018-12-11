@@ -16,9 +16,9 @@ function ConvertHandler() {
   };
   
   this.getUnit = function(input) {
-    var result;
+    ['L','gal','lbs','kg','km','mi'].indexOf(input.split)>=0?;
     
-    return result;
+    
   };
   
   this.getReturnUnit = function(initUnit) {
