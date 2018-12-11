@@ -38,11 +38,15 @@ function ConvertHandler() {
     const miToKm = 1.60934;
     var result;
     
+    switch(initUnit){
+                   
+                   }
+    
     return result;
   };
   
   this.getString = function(initNum, initUnit, returnNum, returnUnit) {
-    var result;
+    var result = [initNum,this.spellOutUnit(initUnit),'converts to',returnNum,this.spellOutUnit(returnUnit)].join(' ');
     
     return result;
   };
