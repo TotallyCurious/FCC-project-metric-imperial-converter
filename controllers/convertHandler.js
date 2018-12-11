@@ -11,7 +11,7 @@ function ConvertHandler() {
   this.getNum = function(input) {
     let patt = '\d+((\/+\d+)?|(\.+\d+(\/{1}\d+(\.+\d+)?)?)?)?'
     var num = patt.exec(input);
-    if (!num)num=1;
+    if (!num)return 1;
     return num;
   };
   
