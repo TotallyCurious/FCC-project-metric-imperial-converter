@@ -8,10 +8,11 @@
 function ConvertHandler() {
   
   this.getNum = function(input) {
-    console.log(input.indexOf(/\w/));
-    let patt = new RegExp(/\d+((\/+\d+)?|(\.+\d+(\/{1}\d+(\.+\d+)?)?)?)?/gi);
+    console.log(/[a-z]/i.exec(input));
+    var num = input.subsr
+    // let patt = new RegExp(/\d+((\/+\d+)?|(\.+\d+(\/{1}\d+(\.+\d+)?)?)?)?/gi);
     // console.log('getnum: ',input.match(patt));
-    var num = input.match(patt);
+    // var num = input.match(patt);
     console.log(typeof(Number(num[0])));
     if (!num)return 1;
     return num[0];
