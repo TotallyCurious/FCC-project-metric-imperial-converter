@@ -77,7 +77,7 @@ function ConvertHandler() {
     const galToL = 3.78541;
     const lbsToKg = 0.453592;
     const miToKm = 1.60934;
-    !initNum?initNum = 1:initNum = eval(initNum);
+    initNum = eval(initNum);
     
     switch(initUnit){
       case 'gal':
