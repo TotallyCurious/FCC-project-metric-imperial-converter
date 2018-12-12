@@ -8,21 +8,23 @@
 function ConvertHandler() {
   
   this.getNum = function(input) {
-    console.log(/[a-z]/i.exec(input));
-    var num = input.subsr
+    var res = /[a-z]/i.exec(input);
+    var num = input.substring(0,res.index)
     // let patt = new RegExp(/\d+((\/+\d+)?|(\.+\d+(\/{1}\d+(\.+\d+)?)?)?)?/gi);
     // console.log('getnum: ',input.match(patt));
     // var num = input.match(patt);
-    console.log(typeof(Number(num[0])));
+    console.log(num,typeof((num)),res);
     if (!num)return 1;
-    return num[0];
+    return num;
   };
   
   this.getUnit = function(input) {
-    let patt = new RegExp(/[a-z]+/gi);
+    // let patt = new RegExp(/[a-z]+/gi);
     // console.log('getunit: ',input.match(patt));
-    var unit = input.match(patt);
-    return unit[0];
+    // var unit = input.match(patt);
+    var res = /[a-z]/i.exec(input);
+    var unit=input.substring(res.index);
+    return unit;
   };
   
   this.getReturnUnit = function(initUnit) {
