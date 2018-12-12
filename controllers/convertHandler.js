@@ -9,6 +9,7 @@ function ConvertHandler() {
   
   this.getNum = function(input) {
     var res = /[a-z]/i.exec(input);
+    if(!res)return'';
     var num = input.substring(0,res.index)
     // let patt = new RegExp(/\d+((\/+\d+)?|(\.+\d+(\/{1}\d+(\.+\d+)?)?)?)?/gi);
     // console.log('getnum: ',input.match(patt));
@@ -55,7 +56,7 @@ function ConvertHandler() {
         return 'mi';
         break;
       default:
-        return 'invalid unit';
+        return 'error';
         break;      
                }
   };

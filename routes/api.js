@@ -21,16 +21,21 @@ module.exports = function (app) {
     var input = req.query.input;
     var initNum = convertHandler.getNum(input);
     var initUnit = convertHandler.getUnit(input);
-    if(initNum==='error'||initUnit==='error'){
-      if(initUnit==='error'){
+    var returnUnit = convertHandler.getReturnUnit(initUnit);
+
+    if(returnUnit==='error'||initUnit==='error'){
+      if(returnUnit==='error'&&initUnit==='error'){
         return res.send('invalid number and unit');
       }
-      else{
+      else if(returnUnit==='error'){
         return res.send('invalid number');
       }
+      else{
+        return res.send('invalid unit');
+      }
     }
+    
     var returnNum = convertHandler.convert(initNum, initUnit);
-    var returnUnit = convertHandler.getReturnUnit(initUnit);
     var toString = convertHandler.getString(initNum, initUnit, returnNum, returnUnit);
     console.log({initNum: initNum, initUnit: initUnit, returnNum: returnNum, returnUnit: returnUnit, string:toString});
     return res.json({initNum: initNum, initUnit: initUnit, returnNum: returnNum, returnUnit: returnUnit, string:toString});
