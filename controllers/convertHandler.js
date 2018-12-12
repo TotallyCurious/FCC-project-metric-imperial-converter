@@ -5,18 +5,18 @@
 *       
 *       
 */
-
+const regex = require('regex');
 function ConvertHandler() {
   
   this.getNum = function(input) {
-    let patt = '\d+((\/+\d+)?|(\.+\d+(\/{1}\d+(\.+\d+)?)?)?)?';
+    let patt = new regex(/\d+((\/+\d+)?|(\.+\d+(\/{1}\d+(\.+\d+)?)?)?)?/g);
     var num = patt.match(input);
     if (!num)return 1;
     return num;
   };
   
   this.getUnit = function(input) {
-    let patt = '[a-z]+';
+    let patt = new regex(/[a-z]+/g);
     var unit = patt.match(input);
     return unit;
   };
@@ -76,7 +76,7 @@ function ConvertHandler() {
     const galToL = 3.78541;
     const lbsToKg = 0.453592;
     const miToKm = 1.60934;
-    !initNum?initNum = 1:initNum = Math.eval(initNum);
+    !initNum?initNum = 1:initNum = eval(initNum);
     
     switch(initUnit){
       case 'gal':
