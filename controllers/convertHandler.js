@@ -13,7 +13,14 @@ function ConvertHandler() {
     // let patt = new RegExp(/\d+((\/+\d+)?|(\.+\d+(\/{1}\d+(\.+\d+)?)?)?)?/gi);
     // console.log('getnum: ',input.match(patt));
     // var num = input.match(patt);
-    console.log(num,typeof((num)),res);
+    console.log(num,typeof((num)*1),res);
+    try{
+      eval(num);    
+    }
+    catch(e){
+      console.log('invalid number');
+      return 'error';
+    }
     if (!num)return 1;
     return num;
   };
@@ -82,7 +89,13 @@ function ConvertHandler() {
     const galToL = 3.78541;
     const lbsToKg = 0.453592;
     const miToKm = 1.60934;
-    initNum = eval(initNum);
+    try{
+      initNum = eval(initNum);    
+    }
+    catch(e){
+      console.log('invalid number');
+      return 'invalid number';
+    }
     
     switch(initUnit){
       case 'gal':
