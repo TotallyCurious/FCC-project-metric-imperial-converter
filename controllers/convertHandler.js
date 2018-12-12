@@ -9,15 +9,15 @@
 function ConvertHandler() {
   
   this.getNum = function(input) {
-    let patt = '\d+((\/+\d+)?|(\.+\d+(\/{1}\d+(\.+\d+)?)?)?)?'
-    var num = patt.exec(input);
+    let patt = '\d+((\/+\d+)?|(\.+\d+(\/{1}\d+(\.+\d+)?)?)?)?';
+    var num = patt.match(input);
     if (!num)return 1;
     return num;
   };
   
   this.getUnit = function(input) {
     let patt = '[a-z]+';
-    var unit = patt.exec(input);
+    var unit = patt.match(input);
     return unit;
   };
   
