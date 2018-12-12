@@ -9,15 +9,17 @@ const regex = require('regex');
 function ConvertHandler() {
   
   this.getNum = function(input) {
-    let patt = new regex(/\d+((\/+\d+)?|(\.+\d+(\/{1}\d+(\.+\d+)?)?)?)?/g);
-    var num = patt.match(input);
+    let patt = new RegExp('/\d+((\/+\d+)?|(\.+\d+(\/{1}\d+(\.+\d+)?)?)?)?/g';
+    console.log('getnum: ',input.match(patt));
+    var num = input.match(patt);
     if (!num)return 1;
     return num;
   };
   
   this.getUnit = function(input) {
-    let patt = new regex(/[a-z]+/g);
-    var unit = patt.match(input);
+    let patt = new RegExp('/[a-z]+/g';
+    console.log('getunit: ',input.match(patt));
+    var unit = input.match(patt);
     return unit;
   };
   
