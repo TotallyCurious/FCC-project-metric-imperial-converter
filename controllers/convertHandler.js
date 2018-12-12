@@ -5,22 +5,21 @@
 *       
 *       
 */
-const regex = require('regex');
 function ConvertHandler() {
   
   this.getNum = function(input) {
-    let patt = new RegExp('/\d+((\/+\d+)?|(\.+\d+(\/{1}\d+(\.+\d+)?)?)?)?/g';
-    console.log('getnum: ',input.match(patt));
+    let patt = new RegExp(/\d+((\/+\d+)?|(\.+\d+(\/{1}\d+(\.+\d+)?)?)?)?/gi);
+    // console.log('getnum: ',input.match(patt));
     var num = input.match(patt);
     if (!num)return 1;
-    return num;
+    return num[0];
   };
   
   this.getUnit = function(input) {
-    let patt = new RegExp('/[a-z]+/g';
-    console.log('getunit: ',input.match(patt));
+    let patt = new RegExp(/[a-z]+/gi);
+    // console.log('getunit: ',input.match(patt));
     var unit = input.match(patt);
-    return unit;
+    return unit[0];
   };
   
   this.getReturnUnit = function(initUnit) {

@@ -7,15 +7,8 @@ dependencies:
   helmet: 3.15.0
   mocha: 3.5.3
   mongodb: 2.2.36
-  regex: 0.1.1
   zombie: 5.0.8
 packages:
-  /JSONSelect/0.4.0:
-    dev: false
-    engines:
-      node: '>=0.4.7'
-    resolution:
-      integrity: sha1-oI7cxn6z/L6Z7WMIVTRKDPKCu40=
   /abab/1.0.4:
     dev: false
     resolution:
@@ -79,10 +72,6 @@ packages:
     dev: false
     resolution:
       integrity: sha1-x57Zf380y48robyXkLzDZkdLS3k=
-  /augment/3.2.1:
-    dev: false
-    resolution:
-      integrity: sha1-7F2elFYUDvqxEQ/ds1LL5U5/sxw=
   /aws-sign2/0.7.0:
     dev: false
     resolution:
@@ -185,12 +174,6 @@ packages:
       node: '>= 0.4.0'
     resolution:
       integrity: sha1-TQJjewZ/6Vi9v906QOxW/vc3Mkc=
-  /colors/0.5.1:
-    dev: false
-    engines:
-      node: '>=0.1.90'
-    resolution:
-      integrity: sha1-fQAj6usVTo7p/Oddy5I9DtFmd3Q=
   /combined-stream/1.0.7:
     dependencies:
       delayed-stream: 1.0.0
@@ -340,10 +323,6 @@ packages:
     dev: false
     resolution:
       integrity: sha1-WTKJDcn04vGeXrAqIAJuXl78j1g=
-  /ebnf-parser/0.1.10:
-    dev: false
-    resolution:
-      integrity: sha1-zR9rpHfFY4xAyX7ZtXLbW6tdgzE=
   /ecc-jsbn/0.1.2:
     dependencies:
       jsbn: 0.1.1
@@ -375,18 +354,6 @@ packages:
       node: '>=0.8.0'
     resolution:
       integrity: sha1-G2HAViGQqN/2rjuyzwIAyhMLhtQ=
-  /escodegen/0.0.21:
-    dependencies:
-      esprima: 1.0.4
-      estraverse: 0.0.4
-    dev: false
-    engines:
-      node: '>=0.4.0'
-    hasBin: true
-    optionalDependencies:
-      source-map: 0.7.3
-    resolution:
-      integrity: sha1-U9ZSz6EDA4gnlFilJmxf/HCcY8M=
   /escodegen/1.11.0:
     dependencies:
       esprima: 3.1.3
@@ -401,13 +368,6 @@ packages:
       source-map: 0.6.1
     resolution:
       integrity: sha512-IeMV45ReixHS53K/OmfKAIztN/igDHzTJUhZM3k1jMhIZWjk45SMwAtBsEXiJp3vSPmTcu6CXn7mDvFHRN66fw==
-  /esprima/1.0.4:
-    dev: false
-    engines:
-      node: '>=0.4.0'
-    hasBin: true
-    resolution:
-      integrity: sha1-n1V+CPw7TSbs6d00+Pv0drYlha0=
   /esprima/3.1.3:
     dev: false
     engines:
@@ -415,12 +375,6 @@ packages:
     hasBin: true
     resolution:
       integrity: sha1-/cpRzuYTOJXjyI1TXOSdv/YqRjM=
-  /estraverse/0.0.4:
-    dev: false
-    engines:
-      node: '>=0.4.0'
-    resolution:
-      integrity: sha1-AaCTLf7ldGhKWYr1pnw7+bZCjbI=
   /estraverse/4.2.0:
     dev: false
     engines:
@@ -766,31 +720,6 @@ packages:
     dev: false
     resolution:
       integrity: sha1-R+Y/evVa+m+S4VAOaQ64uFKcCZo=
-  /jison-lex/0.2.1:
-    dependencies:
-      lex-parser: 0.1.4
-      nomnom: 1.5.2
-    dev: false
-    engines:
-      node: '>=0.4'
-    hasBin: true
-    resolution:
-      integrity: sha1-rEuBXozOUTLrErXfz+jXB7iETf4=
-  /jison/0.4.4:
-    dependencies:
-      JSONSelect: 0.4.0
-      ebnf-parser: 0.1.10
-      escodegen: 0.0.21
-      esprima: 1.0.4
-      jison-lex: 0.2.1
-      lex-parser: 0.1.4
-      nomnom: 1.5.2
-    dev: false
-    engines:
-      node: '>=0.4'
-    hasBin: true
-    resolution:
-      integrity: sha1-hrA7Ze/sAHqR9JPs6r5W+QqmtDk=
   /jsbn/0.1.1:
     dev: false
     resolution:
@@ -851,14 +780,6 @@ packages:
       node: '>= 0.8.0'
     resolution:
       integrity: sha1-OwmSTt+fCDwEkP3UwLxEIeBHZO4=
-  /lex-parser/0.1.4:
-    dev: false
-    resolution:
-      integrity: sha1-ZMTwJfF/1Tv7RXY/rrFvAVp0dVA=
-  /lex/1.7.4:
-    dev: false
-    resolution:
-      integrity: sha1-M91muYCjjXemxCTXFz5vQNYCwMU=
   /lodash._baseassign/3.2.0:
     dependencies:
       lodash._basecopy: 3.0.1
@@ -1025,14 +946,6 @@ packages:
     dev: false
     resolution:
       integrity: sha1-ICtIAhoMTL3i34DeFaF0Q8i0OYA=
-  /nomnom/1.5.2:
-    dependencies:
-      colors: 0.5.1
-      underscore: 1.1.7
-    deprecated: Package no longer supported. Contact support@npmjs.com for more info.
-    dev: false
-    resolution:
-      integrity: sha1-9DRUSKhTz71cDSYyDyR3qwUm/i8=
   /nwmatcher/1.4.4:
     dev: false
     resolution:
@@ -1212,15 +1125,6 @@ packages:
     dev: false
     resolution:
       integrity: sha1-NXdOtzW/UPtsB46DM0tHI1AgfXk=
-  /regex/0.1.1:
-    dependencies:
-      augment: 3.2.1
-      jison: 0.4.4
-      lex: 1.7.4
-      statemachines: 0.1.0
-    dev: false
-    resolution:
-      integrity: sha1-BYCZXRhGxTdqdiudNYuDBo0geu8=
   /request/2.88.0:
     dependencies:
       aws-sign2: 0.7.0
@@ -1317,10 +1221,6 @@ packages:
     dev: false
     resolution:
       integrity: sha512-BvE/TwpZX4FXExxOxZyRGQQv651MSwmWKZGqvmPcRIjDqWub67kTKuIMx43cZZrS/cBBzwBcNDWoFxt2XEFIpQ==
-  /sorted-array/1.1.0:
-    dev: false
-    resolution:
-      integrity: sha1-YamDJeQSu5CZm0usGN/tXzVkEC0=
   /source-map/0.6.1:
     dev: false
     engines:
@@ -1328,13 +1228,6 @@ packages:
     optional: true
     resolution:
       integrity: sha512-UjgapumWlbMhkBgzT7Ykc5YXUT46F0iKu8SGXq0bcwP5dz/h0Plj6enJqjz1Zbq2l5WaqYnrVbwWOWMyF3F47g==
-  /source-map/0.7.3:
-    dev: false
-    engines:
-      node: '>= 8'
-    optional: true
-    resolution:
-      integrity: sha512-CkCj6giN3S+n9qrYiBTX5gystlENnRW5jZeNLHpe6aue+SrHcG5VYwujhW9s4dY31mEGsxBDrHR6oI69fTXsaQ==
   /sshpk/1.15.2:
     dependencies:
       asn1: 0.2.4
@@ -1352,13 +1245,6 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-Ra/OXQtuh0/enyl4ETZAfTaeksa6BXks5ZcjpSUNrjBr0DvrJKX+1fsKDPpT9TBXgHAFsa4510aNVgI8g/+SzA==
-  /statemachines/0.1.0:
-    dependencies:
-      augment: 3.2.1
-      sorted-array: 1.1.0
-    dev: false
-    resolution:
-      integrity: sha1-tUX9PYpVKA8wK4aW8ZwKEcTjOt4=
   /statuses/1.4.0:
     dev: false
     engines:
@@ -1473,10 +1359,6 @@ packages:
     dev: false
     resolution:
       integrity: sha1-rOEWq1V80Zc4ak6I9GhTeMiy5Po=
-  /underscore/1.1.7:
-    dev: false
-    resolution:
-      integrity: sha1-QLq4S60Z0jAJbo1u9ii/8FXYPbA=
   /unpipe/1.0.0:
     dev: false
     engines:
@@ -1591,5 +1473,4 @@ specifiers:
   helmet: ^3.1.0
   mocha: ^3.2.0
   mongodb: ^2.2.16
-  regex: 0.1.1
   zombie: ^5.0.5
