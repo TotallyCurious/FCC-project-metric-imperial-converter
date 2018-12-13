@@ -23,11 +23,11 @@ module.exports = function (app) {
     var initUnit = convertHandler.getUnit(input);
     var returnUnit = convertHandler.getReturnUnit(initUnit);
 
-    if(returnUnit==='error'||initUnit==='error'){
-      if(returnUnit==='error'&&initUnit==='error'){
+    if(returnUnit==='error'||initNum==='error'){
+      if(returnUnit==='error'&&initNum==='error'){
         return res.send('invalid number and unit');
       }
-      else if(returnUnit==='error'){
+      else if(initNum==='error'){
         return res.send('invalid number');
       }
       else{
