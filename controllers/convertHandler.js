@@ -11,9 +11,13 @@ function ConvertHandler() {
     var res = /[a-z]/i.exec(input);
     if(!res)return'';
     var num = input.substring(0,res.index);
-    // let patt = new RegExp(/\d+((\/+\d+)?|(\.+\d+(\/{1}\d+(\.+\d+)?)?)?)?/gi);
-    // console.log('getnum: ',input.match(patt));
-    // var num = input.match(patt);
+    
+    let patt = new RegExp(/\d+((\/+\d+)?|(\.+\d+(\/{1}\d+(\.+\d+)?)?)?)?/gi);
+    console.log('getnum: ',input.match(patt));
+    var num = num.match(patt);
+    if(!num)return'invalid number';
+    
+    
     console.log(num,typeof((num)*1),res);
     try{
       eval(num);    

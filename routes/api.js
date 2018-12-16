@@ -20,7 +20,7 @@ module.exports = function (app) {
     console.log(req.query.input);
     var input = req.query.input;
     var initNum = convertHandler.getNum(input);
-    var initUnit = convertHandler.getUnit(input);
+    var initUnit = convertHandler.getUnit(input).toLowerCase();
     var returnUnit = convertHandler.getReturnUnit(initUnit);
 
     if(returnUnit==='error'||initNum==='error'){
