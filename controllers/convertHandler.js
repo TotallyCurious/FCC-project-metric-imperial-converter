@@ -8,17 +8,20 @@
 function ConvertHandler() {
   
   this.getNum = function(input) {
-    var res = /[a-z]/i.exec(input);
+    console.log('input: ',input);
+    let patt0 = new RegExp(/[a-z]/i);
+    var res = input.match(patt0);
+    console.log('res: ',res);
     if(!res)return'';
     var num = input.substring(0,res.index);
+    console.log(num);
     
     let patt = new RegExp(/\d+((\/+\d+)?|(\.+\d+(\/{1}\d+(\.+\d+)?)?)?)?/gi);
-    console.log('getnum: ',input.match(patt));
+    // console.log('getnum: ',num.match(num, patt));
     var num = num.match(patt);
     if(!num)return'invalid number';
     
-    
-    console.log(num,typeof((num)*1),res);
+    // console.log(num,typeof((num)*1),res);
     try{
       eval(num);    
     }

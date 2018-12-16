@@ -23,11 +23,11 @@ module.exports = function (app) {
     var initUnit = convertHandler.getUnit(input).toLowerCase();
     var returnUnit = convertHandler.getReturnUnit(initUnit);
 
-    if(returnUnit==='error'||initNum==='error'){
-      if(returnUnit==='error'&&initNum==='error'){
+    if(returnUnit==='invalid unit'||initNum==='invalid number'){
+      if(returnUnit==='invalid unit'&&initNum==='invalid number'){
         return res.send('invalid number and unit');
       }
-      else if(initNum==='error'){
+      else if(initNum==='invalid number'){
         return res.send('invalid number');
       }
       else{
