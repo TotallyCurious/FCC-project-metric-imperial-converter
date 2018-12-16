@@ -20,7 +20,7 @@ function ConvertHandler() {
     }
     catch(e){
       console.log('invalid number');
-      return 'error';
+      return 'invalid number';
     }
     if (!num)return 1;
     return num;
@@ -37,26 +37,26 @@ function ConvertHandler() {
   
   this.getReturnUnit = function(initUnit) {
     switch(initUnit){
-      case 'gal':
-        return 'L';
+      case 'gal'||'GAL':
+        return 'l';
         break;
-      case 'L':
+      case 'l'||'L':
         return 'gal';
         break;
-      case 'lbs':
+      case 'lbs'||'LBS':
         return 'kg';
         break;
-      case 'kg':
+      case 'kg'||'KG':
         return 'lbs';
         break;
-      case 'mi':
+      case 'mi'||'MI':
         return 'km';
         break;
-      case 'km':
+      case 'km'||'KM':
         return 'mi';
         break;
       default:
-        return 'error';
+        return 'invalid unit';
         break;      
                }
   };
@@ -102,7 +102,7 @@ function ConvertHandler() {
       case 'gal':
         return initNum*galToL;
         break;
-      case 'L':
+      case 'l':
         return initNum/galToL;
         break;
       case 'lbs':
