@@ -17,7 +17,7 @@ module.exports = function (app) {
 
   app.route('/api/convert')
   .get(function (req, res){
-    console.log(req.query.input);
+    // console.log(req.query.input);
     var input = req.query.input;
     var initNum = convertHandler.getNum(input);
     var initUnit = convertHandler.getUnit(input).toLowerCase();
@@ -37,13 +37,10 @@ module.exports = function (app) {
     
     var returnNum = convertHandler.convert(initNum, initUnit);
     var toString = convertHandler.getString(initNum, initUnit, returnNum, returnUnit);
-    console.log({initNum: initNum, initUnit: initUnit, returnNum: returnNum, returnUnit: returnUnit, string:toString});
+    // console.log({initNum: initNum, initUnit: initUnit, returnNum: returnNum, returnUnit: returnUnit, string:toString});
     return res.json({initNum: initNum, initUnit: initUnit, returnNum: returnNum, returnUnit: returnUnit, string:toString});
 
 
-
-
-    //res.json
     });
     
 };

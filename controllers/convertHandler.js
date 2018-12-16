@@ -13,7 +13,6 @@ function ConvertHandler() {
     
     if(!res)return'';
     var num = input.substring(0,res.index);
-    
     if((num.match(/\//g)||[]).length>=2)return 'invalid number';
     try{
       eval(num);    
@@ -66,12 +65,12 @@ function ConvertHandler() {
   };
 
   this.spellOutUnit = function(unit) {
-    console.log(unit);
+    // console.log(unit);
     switch(unit){
       case 'gal':
         return 'gallons';
         break;
-      case 'L':
+      case 'l':
         return 'litres';
         break;
       case 'lbs':
@@ -99,7 +98,7 @@ function ConvertHandler() {
       initNum = eval(initNum);    
     }
     catch(e){
-      console.log('invalid number');
+      // console.log('invalid number');
       return 'invalid number';
     }
     

@@ -91,7 +91,7 @@ suite('Unit Tests', function(){
       var expect = ['gallons','litres','miles','kilometers','pounds','kilograms'];
       //see above example for hint
       input.forEach(function(ele, i) {
-        assert.equal(convertHandler.getReturnUnit(ele), expect[i]);
+        assert.equal(convertHandler.spellOutUnit(ele), expect[i]);
       });
       done();
     });
