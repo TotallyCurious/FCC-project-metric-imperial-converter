@@ -8,26 +8,17 @@
 function ConvertHandler() {
   
   this.getNum = function(input) {
-    // console.log('input: ',input);
     let patt0 = new RegExp(/[a-z]/i);
     var res = input.match(patt0);
-    // console.log('res: ',res);
+    
     if(!res)return'';
     var num = input.substring(0,res.index);
-    console.log('num: ',num);
     
     if((num.match(/\//g)||[]).length>=2)return 'invalid number';
-//     let patt = new RegExp(/\d+((\/+\d+)?|(\.+\d+(\/{1}\d+(\.+\d+)?)?)?)?/gi);
-//     console.log('getnum: ',num.match(patt));
-//     var num = num.match(patt);
-//     if(!num)return'invalid number';
-    
-    // console.log(num,typeof((num)*1),res);
     try{
       eval(num);    
     }
     catch(e){
-      console.log('invalid number');
       return 'invalid number';
     }
     if (!num)return 1;
@@ -35,11 +26,16 @@ function ConvertHandler() {
   };
   
   this.getUnit = function(input) {
-    // let patt = new RegExp(/[a-z]+/gi);
-    // console.log('getunit: ',input.match(patt));
-    // var unit = input.match(patt);
-    var res = /[a-z]/i.exec(input);
-    var unit=input.substring(res.index);
+    
+      var units = ['gal','l','mi','km','lbs','kg','GAL','L','MI','KM','LBS','KG'];
+    
+    let patt0 = new RegExp(/[a-z]/i);
+    var res = input.match(patt0);
+    
+    if(!res)return'';
+    var unit = input.substring(res.index);
+    
+    if(units.indexOf(unit)<0)return 'invalid unit';
     return unit;
   };
   
@@ -70,6 +66,7 @@ function ConvertHandler() {
   };
 
   this.spellOutUnit = function(unit) {
+    console.log(unit);
     switch(unit){
       case 'gal':
         return 'gallons';
